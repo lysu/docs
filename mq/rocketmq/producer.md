@@ -1,6 +1,15 @@
 # rocketmq producer
 
-##### `org.apache.rocketmq.client.producer.MQProducer`
+#### Start `MQProducer`
+
+- check config just like topic name and so on.. - -
+- set instance name to pid if not inner group
+- get cached `MQClient` or create new one
+- `MQClient` creative with `pull`, `rebalance` and so on service
+- register producer in specify group in local memory
+- start `MQClient` if needed, start underhook netty, pull, reblance, ns fetch threads in here.
+
+#### Send with `MQProducer`
 
 many `send` methods with different arguments and them divided by..
 
